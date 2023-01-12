@@ -16,7 +16,7 @@ print("Terve,",input("Anna nimesi: "))
 Radius = int(input("Syötä säde: "))
 Circumference = math.pi*Radius**2
 
-print("Ympyrän säde: ",Circumference)
+print("Ympyrän pinta-ala: ",Circumference)
 
 
 
