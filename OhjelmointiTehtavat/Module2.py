@@ -16,7 +16,7 @@ print("Terve,",input("Anna nimesi: "))
 Radius = int(input("Syötä säde: "))
 Circumference = math.pi*Radius**2
 
-print(Circumference)
+print("Ympyrän säde: ",Circumference)
 
 
 
@@ -24,11 +24,11 @@ print(Circumference)
 
 # 3.
 
-Base = 2
-Height = 3
+Base = float(input("Anna kanta:\n"))
+Height = float(input("Anna korkeus:\n"))
 
 Perimeter = 2 * (Base + Height)
-Area = Base * Height
+Area = (Height * Base / 2)
 
 print("Suorakulmion piiri on ", Perimeter)
 print("Suorakulmion pinta-ala on ", Area)
@@ -39,10 +39,12 @@ print("Suorakulmion pinta-ala on ", Area)
 
 # 4. Summa, Tulo & Keskiarvo
 
+print()
+
 Numbers = {
-    4,
-    6,
-    2,
+    float(input("Anna 3 lukua\n")),
+    float(input()),
+    float(input()),
 }
 
 Summa = sum(Numbers)
@@ -65,6 +67,8 @@ print(Keskiarvo)
 
 
 # 5. Massalaskenta
+
+print()
 
 def GramToKilogram(Grams):
     return Grams*0.001
