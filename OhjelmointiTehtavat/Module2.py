@@ -4,7 +4,7 @@ import random
 # 1. Nimi
 
 MyName = "Salomon"
-print("Terve,",MyName)
+print("Terve,",input("Anna nimesi: "))
 
 
 
@@ -12,7 +12,8 @@ print("Terve,",MyName)
 
 # 2. Ympyrän Pinta-ala
 
-Radius = 2
+
+Radius = int(input("Syötä säde: "))
 Circumference = math.pi*Radius**2
 
 print(Circumference)
@@ -68,41 +69,23 @@ print(Keskiarvo)
 def GramToKilogram(Grams):
     return Grams*0.001
 
-class Luoti:
-    Weight = 13.3 #g
-    Quantity = 13.5
-    pass
+Leivaska = float(input("Anna leiväskät:\t"))
+Naula = float(input("Anna naulat:\t"))
+Luoti = float(input("Anna luodit:\t"))
 
-class Naula:
-    RatioToLuoti = 32
-    Quantity = 9
-    Weight = 0
-    pass
-
-class Leivaska:
-    RatioToNaula = 20
-    Quantity = 3
-    Weight = 0
-    pass
-
-Naula.Weight = Luoti.Weight * Naula.RatioToLuoti
-Leivaska.Weight = Naula.Weight * Leivaska.RatioToNaula
-
-GramSum = Luoti.Weight * Luoti.Quantity + Naula.Weight * Naula.Quantity + Leivaska.Weight * Leivaska.RatioToNaula
-
-print(Leivaska.Weight)
-
-print(GramSum)
+NaulaPaino = Leivaska * 20 + Naula
+LuotiPaino = NaulaPaino * 32 +Luoti
+Paino = LuotiPaino * 13.3
 
 
-
+print("\nGrammoina: ", int(Paino%1000))
+print("Kilogrammoina: ", int(GramToKilogram(Paino)))
 
 
 
 # 6. Arvonta
 
-print()
-print("Kolminumerinen Koodi:")
+print("\n Kolminumerinen Koodi:")
 
 ThreeNumCode = {}
 
@@ -112,9 +95,7 @@ for i in range(3):
     ThreeNumCode[i] = random.randint(0,9)
     print(ThreeNumCode[i])
 
-
-print()
-print("Nelinumerinen Koodi:")
+print("\n Nelinumerinen Koodi:")
 
 FourNumCode = {}
 
