@@ -3,24 +3,16 @@ import random
 
 # 1. Nimi
 
-MyName = "Salomon"
 print("Terve,",input("Anna nimesi: "))
-
-
-
-
 
 # 2. Ympyrän Pinta-ala
 
+Radius = float(input("Syötä säde: "))
+Area = math.pi*Radius**2
 
-Radius = int(input("Syötä säde: "))
-Circumference = math.pi*Radius**2
+print(math.pi)
 
-print("Ympyrän pinta-ala: ",Circumference)
-
-
-
-
+print("Ympyrän pinta-ala: ",Area)
 
 # 3.
 
