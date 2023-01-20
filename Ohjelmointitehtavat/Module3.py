@@ -11,7 +11,7 @@ if KalanPituus <= 37:
 Luokat = {
     "LUX": "on parvekkeellinen hytti yläkannella.",
     "A": "on ikkunallinen hytti autokannen yläpuolella.",
-    "B": "on ikkunaton hytti autokannen yläpuolella.",
+    "B": "on ikkunaton hytti autokannen yläpuolella.", 
     "C": "on ikkunaton hytti autokannen alapuolella."
 }
 Luokka = str.upper(input("Anna laivan hyttiluokka:"))
