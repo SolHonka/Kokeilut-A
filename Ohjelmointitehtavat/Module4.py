@@ -23,6 +23,7 @@ while True:
 #3
 
 Numbers = []
+
 while True:
     Input = input("Anna luku:")
     if not Input:
