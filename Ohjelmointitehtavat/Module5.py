@@ -1,6 +1,8 @@
 import random
 import math
 
+print(2**-1)
+
 # 1
 NumOfDice = int(input("Kuinka monta arpakuutiota heitetään: "))
 Sum = 0
@@ -21,23 +23,31 @@ while True:
 
 Numbers.sort(reverse=True)
 
-for i in range(5):
-    print(Numbers[i])
+if len(Numbers) >= 5:
+    for i in range(5):
+        print(Numbers[i])
 
 #3
 
-Number = int(input("Anna kokonaisluku: "))
+while True:
+    Number = int(input("Anna kokonaisluku: "))
 
-IsPrime = True
-for i in range(2, int(math.sqrt(Number)) + 1):
-    if Number % i == 0:
-        IsPrime = False
+    print(math.sqrt(Number))
+
+    IsPrime = True
+
+    if not Number:
         break
 
-if IsPrime:
-    print(Number, "on alkuluku.")
-else:
-    print(Number, "ei ole alkuluku.")
+    for i in range(2, int(Number)):
+        if Number % i == 0:
+            IsPrime = False
+            break
+    if IsPrime:
+        print(Number, "on alkuluku.")
+        # break
+    else:
+        print(Number, "ei ole alkuluku.")
 
 #4
 
