@@ -1,15 +1,13 @@
 import random
 import math
 
-print(2**-1)
+print(1%10)
 
 # 1
 NumOfDice = int(input("Kuinka monta arpakuutiota heitetään: "))
 Sum = 0
-
 for i in range(NumOfDice):
     Sum += random.randint(1, 6)
-
 print("Silmälukujen summa:", Sum)
 
 #2
@@ -31,9 +29,6 @@ if len(Numbers) >= 5:
 
 while True:
     Number = int(input("Anna kokonaisluku: "))
-
-    print(math.sqrt(Number))
-
     IsPrime = True
 
     if not Number:
