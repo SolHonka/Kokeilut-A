@@ -19,7 +19,7 @@ Luokka = str.upper(input("Anna laivan hyttiluokka:"))
 if not Luokat[Luokka]:
     print(Luokka, "on virheellinne luokka!")
 else:
-    print(Luokka, Luokat[Luokka])
+    print(Luokka, Luokat[Luokka])   
 
 #3
 
