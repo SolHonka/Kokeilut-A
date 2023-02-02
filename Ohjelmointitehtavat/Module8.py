@@ -1,4 +1,5 @@
 import mysql.connector
+import geopy.distance
 
 Connection = mysql.connector.connect(
         host="localhost",
@@ -36,6 +37,7 @@ while True:
 #2
 
 
+
 while True:
     Country = input("Anna maakoodi: ")
     if Country == "":
@@ -60,3 +62,26 @@ while True:
         Cursor.close()
 
 #3
+def GetAirportCoords(ICAO):
+    Cursor = Connection.cursor()
+    Cursor.execute(f"SELECT latitude_deg, longitude_deg FROM airport WHERE ident='{ICAO}'")
+    Result = Cursor.fetchone()
+
+    Cursor.close()
+
+    return Result
+
+def GetAirportDistance(ICAO1, ICAO2):
+    Coords1 = GetAirportCoords(ICAO1)
+    Coords2 = GetAirportCoords(ICAO2)
+
+    if not Coords1 or not Coords2:
+        print("One or both airports not found in database.")
+        return
+
+    distance = geopy.distance.great_circle(Coords1, Coords2).kilometers
+    print(f"The distance between {ICAO1} and {ICAO2} is {distance:.2f} kilometers.")
+
+ICAO1 = input("Enter first ICAO code: ")
+IACO2 = input("Enter second ICAO code: ")
+GetAirportDistance(ICAO1, IACO2)

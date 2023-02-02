@@ -1,16 +1,22 @@
 #1
 
-Seasons = ["Talvi", "Kevät", "Kesä", "Syksy"]
-
-def GetSeason(month_number):
-    return Seasons[(month_number - 1) // 3]
-
+Seasons = {
+    "Talvi": [12,1,2],
+    "Kevät": [3,4,5],
+    "Kesä": [6,7,8],
+    "Syksy": [9,10,11]
+}
 while True:
     MonthNumber = int(input("Anna kuu (1-12): "))
     if MonthNumber < 1 or MonthNumber > 12:
         break
-    Season = GetSeason(MonthNumber)
-    print(f"Kuukauden {MonthNumber} vuodenaika on {Season}")
+
+
+    for Season,Months in Seasons.items():
+        if MonthNumber in Months:
+            print(f"Kuukauden {MonthNumber} vuodenaika on {Season}")
+
+
 
 #2
 
