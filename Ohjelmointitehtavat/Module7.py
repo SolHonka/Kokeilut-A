@@ -11,7 +11,6 @@ while True:
     if MonthNumber < 1 or MonthNumber > 12:
         break
 
-
     for Season,Months in Seasons.items():
         if MonthNumber in Months:
             print(f"Kuukauden {MonthNumber} vuodenaika on {Season}")
