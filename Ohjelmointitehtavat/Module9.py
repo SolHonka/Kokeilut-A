@@ -61,12 +61,7 @@ CarStats.field_names = ["Registration Number", "Top Speed (km/h)", "Current Spee
 while not Finished:
     for CarX in Cars:
         CarX.Accelerate(random.randint(-10, 15))
-
-    for CarX in Cars:
         CarX.Travel(1)
-
-
-    for CarX in Cars:
         if CarX.DistanceTravelled >= 10000:
             Finished = True
             print()
@@ -75,9 +70,7 @@ while not Finished:
     if Finished:
         for CarX in Cars:
             print()
-
             Victor = False
-
             if CarX.DistanceTravelled >= 10000:
                 Victor = True
 
