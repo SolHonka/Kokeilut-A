@@ -54,6 +54,10 @@ print("Race begun!")
 
 Finished = False
 
+CarStats = PrettyTable()
+CarStats.field_names = ["Registration Number", "Top Speed (km/h)", "Current Speed (km/h)",
+                                    "Distance Traveled (km)", "Winner"]
+
 while not Finished:
     for CarX in Cars:
         CarX.Accelerate(random.randint(-10, 15))
@@ -68,10 +72,15 @@ while not Finished:
             print()
             print(f"{CarX.RegistrationNumber} reached the finish line!")
 
-            CarStats = PrettyTable()
-            CarStats.field_names = ["Registration Number", "Top Speed (km/h)", "Current Speed (km/h)",
-                                 "Distance Traveled (km)"]
+    if Finished:
+        for CarX in Cars:
+            print()
 
-            CarStats.add_row([CarX.RegistrationNumber, CarX.TopSpeed, CarX.CurrentSpeed, CarX.DistanceTravelled])
+            Victor = False
 
-            print(CarStats)
+            if CarX.DistanceTravelled >= 10000:
+                Victor = True
+
+            CarStats.add_row([CarX.RegistrationNumber, CarX.TopSpeed, CarX.CurrentSpeed, CarX.DistanceTravelled, Victor])
+
+        print(CarStats)
