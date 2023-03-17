@@ -7,6 +7,7 @@ def Clamp(Value, Min, Max):
     if Value < Min: return Min
     if Value > Max: return Max
     return Value
+
 class Car:
     def __init__(self, RegistrationNumber, TopSpeed):
         self.RegistrationNumber = RegistrationNumber
