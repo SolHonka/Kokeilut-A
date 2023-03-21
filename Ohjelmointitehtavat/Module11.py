@@ -31,7 +31,6 @@ class Magazine(Publication):
         print("Editor:", self.editor)
 
 
-# Main program
 aku_ankka = Magazine("Aku Ankka", "Aki Hyyppä")
 hytti_no_6 = Book("Hytti n:o 6", "Rosa Liksom", 200)
 
