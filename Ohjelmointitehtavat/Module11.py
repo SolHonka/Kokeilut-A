@@ -1,6 +1,5 @@
-import random
 
-#1
+# 1
 class Publication:
     def __init__(self, name):
         self.name = name
@@ -37,7 +36,7 @@ hytti_no_6 = Book("Hytti n:o 6", "Rosa Liksom", 200)
 aku_ankka.print_info()
 hytti_no_6.print_info()
 
-#2
+# 2
 
 
 class Car:
