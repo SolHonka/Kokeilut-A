@@ -38,7 +38,7 @@ def get_airport_info(icao):
     cursor.close()
 
     if airport:
-        response = {"ICAO": icao, "Name": airport[0], "Municipality": airport[1]}
+        response = {"ICAO": str.upper(icao), "Name": airport[0], "Municipality": airport[1]}
         return response
 
 
